@@ -27,7 +27,13 @@
         <section id="camera-section">
             <h2>take a pic! ♡( >؂•̀ )✧</h2>
             <video id="camera" autoplay playsinline muted></video>
-            <button>Take Photo!</button>
+            <canvas id="photo-canvas" hidden></canvas>
+            <img id="photo-preview" alt="your captured photo" hidden>
+            <div id="photo-buttons">
+                <button id="take-photo">Take Photo!</button>
+                <button id="retake-photo" hidden>Retake?</button>
+                <button id="upload-photo" hidden>Upload!</button>
+            </div>
         </section>
     </main>
     <script src="js/camera.js"></script>

@@ -1,8 +1,14 @@
-
 body {
     margin: 0;
     background-color: maroon;
+    background: linear-gradient(
+        135deg,
+        maroon,
+        #350f0f
+    );
+    min-height: 100vh;
 }
+
 h1 {
     color: white;
     font-size: clamp(2.5rem, 6vw, 6rem);
@@ -14,7 +20,7 @@ h2 {
     text-align: center;
     font-family: "Redaction 50", serif;
     font-style: italic;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 nav{
@@ -54,7 +60,7 @@ nav a:hover{
     font-size: 20px;
 }
 
-#camera-section button{
+button{
     font-family: 'Redaction 50', serif;
     font-size: clamp(1.2rem, 3vw, 2rem);
     padding: 0.75em 1.5em;
@@ -66,11 +72,27 @@ nav a:hover{
     cursor: pointer;
 }
 
-#camera-section button:hover{
-    background-color: #e8b7c5;
+#photo-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 90%;
+    max-width: 500px;
 }
 
-#camera {
+#photo-buttons button {
+    flex: 1;
+    min-width: 0;
+    width: auto;
+    padding: 0.75em 0.5em;
+}
+
+#camera-section button:hover{
+    background-color: #e8b7c5;
+
+}
+
+#camera, #photo-preview {
     display: block;
     width: 90%;
     max-width: 500px;
@@ -78,4 +100,10 @@ nav a:hover{
     border: 10px solid rgb(233, 184, 48);
     box-sizing: border-box;
     border-style: groove;
+    margin-bottom: 35px;
+}
+
+
+[hidden] {
+    display: none !important;
 }
