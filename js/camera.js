@@ -21,12 +21,14 @@ loadCamera();
 const photoButton = document.getElementById("take-photo");
 const retakeButton = document.getElementById("retake-photo");
 const uploadButton = document.getElementById("upload-photo");
+const downloadButton = document.getElementById("download-button");
 const photoCanvas = document.getElementById("photo-canvas");
 const preview = document.getElementById("photo-preview");
 
 photoButton.addEventListener("click", takePicture);
 retakeButton.addEventListener("click", retakePicture);
 uploadButton.addEventListener("click", uploadPicture);
+downloadButton.addEventListener("click", downloadPicture);
 
 function takePicture() {
     if (vidFootage.videoWidth === 0) {
@@ -44,6 +46,7 @@ function takePicture() {
     photoButton.hidden = true;
     retakeButton.hidden = false;
     uploadButton.hidden = false;
+    downloadButton.hidden=false;
 }
 
 function retakePicture(){
@@ -53,6 +56,20 @@ function retakePicture(){
     photoButton.hidden = false;
     retakeButton.hidden = true;
     uploadButton.hidden = true;
+    downloadButton.hidden=true;
+}
+
+//download and upload button functions here
+
+function downloadPicture() {
+    const link = document.createElement("a");
+    link.href = photoCanvas.toDataURL("image/png");
+    link.download = "your-photobooth-photo.png";
+    link.click();
+}
+
+function uploadPicture(){
+
 }
 
 

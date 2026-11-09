@@ -1,14 +1,8 @@
+
 body {
     margin: 0;
     background-color: maroon;
-    background: linear-gradient(
-        135deg,
-        maroon,
-        #350f0f
-    );
-    min-height: 100vh;
 }
-
 h1 {
     color: white;
     font-size: clamp(2.5rem, 6vw, 6rem);
@@ -20,7 +14,7 @@ h2 {
     text-align: center;
     font-family: "Redaction 50", serif;
     font-style: italic;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 nav{
@@ -60,7 +54,7 @@ nav a:hover{
     font-size: 20px;
 }
 
-button{
+#camera-section button{
     font-family: 'Redaction 50', serif;
     font-size: clamp(1.2rem, 3vw, 2rem);
     padding: 0.75em 1.5em;
@@ -72,24 +66,23 @@ button{
     cursor: pointer;
 }
 
-#photo-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    width: 90%;
-    max-width: 500px;
-}
-
-#photo-buttons button {
-    flex: 1;
-    min-width: 0;
-    width: auto;
-    padding: 0.75em 0.5em;
-}
-
 #camera-section button:hover{
     background-color: #e8b7c5;
+}
 
+#camera-section #download-button {
+    width: auto;
+    font-size: 16px;
+    padding: 8px 12px;
+    margin-top: 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+#camera-section #download-button:hover {
+    background-color: transparent;
+    color: #e8b7c5;
 }
 
 #camera, #photo-preview {
@@ -102,7 +95,6 @@ button{
     border-style: groove;
     margin-bottom: 35px;
 }
-
 
 [hidden] {
     display: none !important;
